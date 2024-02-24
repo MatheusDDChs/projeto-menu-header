@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+/* Com o root podemos dar variáveis para nossa declarações */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+:root {
+    --cor1: #ff0000;
+    --cor-titulo: rgb(160, 49, 49);
+    --cor3: #f0cedd;
+    --cor-kadesh01: #860000;
+    --cor-kadesh02: #E7E7E7;
+
+
+    --fonte-padrao: 'Times New Roman', Times, serif;
+    --fonte-titulo: 'Cinzel', serif;
+    --fonte-nav: "Montserrat", sans-serif;
+}
+
+html {
+    background-color: var(--cor3);
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    margin: 0px;
+}
+
+#top {
+    margin-top: 4em;
+}
+
+.image {
+    display: flex;
+    justify-content: space-around;
+
+    padding-right: 100px;
+}
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    position: sticky;
+
+    width: 100vw;
+    height: 20vh;
+    z-index: 2;
+    left: 0;
+    top: 0;
+
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.329);
+}
+
+header img{
+    margin-right: 35px;
+}
+
+header div.pesquisa {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.692);
+
+    margin-right: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.507);
+    background-color: white;
+}
+
+
+header a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    font-size: 1em;
+    font-family: var(--fonte-nav);
+    color: #990000;
+
+    position: relative;
+    padding: 0px 20px 15px 20px;
+    z-index: 2;
+}
+
+header a::after{
+    content: " ";
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s ease-in-out;
+
+    background-color: red;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+header a#last {
+    margin-right: 15px;
+}
+
+header a#first::after {
+    width: 100%;
+}
+/* PAISES */
+
+header .paises {
+    width: 70px;
+    height: 90px;
+    padding: 10px;
+
+    align-items: center;
+    text-align: center;
+}
+
+/* BRAZIL */
+
+header .paises #brazil img {
+    width: 35px;
+    height: 35px;
+    margin: auto;
+
+    transition: 0.2s ease-in-out;
+}
+
+header .paises #brazil img:hover {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* UNITED STATES */
+
+header .paises #states img {
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    transition: 0.2s ease-in-out;
+}
+
+header .paises #states img:hover {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+
+/* O main é repetido 4 vezes para a impressão */
+
+main {
+    align-items: center;
+    text-align: justify;
+
+    max-width: 780px;
+    margin: 10px 0px 45px 0px;
+    padding: 5px;
+    border-radius: 10px;
+
+    background-image: linear-gradient(to bottom right, var(--cor1), rgb(255, 255, 255));
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.212);
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+
+.principal {
+    justify-content: center;
+    display: grid;
+}
+
+strong {
+    font-size: 1.1em;
+    font-weight: bolder;
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(80, 80, 80);
+}
+
+h1 {
+    margin-left: 15px;
+
+    color: var(--cor-titulo);
+    font-family: var(--fonte-titulo);
+    font-weight: medium;
+}
+
+
+/* Kadesh Logo */
+
+img {
+    width: 100px;
+}
+
+p {
+    margin-left: 10px;
+
+    text-align: justify;
+    text-indent: 20px;
+}
+
+
+/* RODAPÉ */
+
+footer p {
+    text-indent: 0px;
+}
+
+footer {
+
+    width: 100vw;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-evenly;
+
+    font-family: var(--fonte-nav);
+    background-color: var(--cor-kadesh01);
+}
+
+.logo-pb img{
+    width: 300px;
+    height: 197px;
+}
+
+footer div.midias {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div.midias img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Fim do projeto */
